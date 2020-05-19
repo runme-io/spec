@@ -1,0 +1,9 @@
+version: 1.0
+publish: app
+services:
+  app:
+    image: hashicorp/http-echo:latest
+    command: /http-echo -text test
+    ports:
+    - container: 5678
+      public: 80
